@@ -129,6 +129,17 @@ class ViewController: UIViewController {
                 button.translatesAutoresizingMaskIntoConstraints = false
                 return button
             }()
+        //MARK: соединение кнопак Twitter и Facebook
+            
+            private let socialStackView: UIStackView = {
+                let stack = UIStackView()
+                stack.axis = .horizontal
+                stack.spacing = 16
+                stack.distribution = .fillEqually
+                stack.translatesAutoresizingMaskIntoConstraints = false
+                return stack
+            }()
+
         
     }
 }
