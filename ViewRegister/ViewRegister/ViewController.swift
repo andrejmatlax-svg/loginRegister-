@@ -97,5 +97,18 @@ class ViewController: UIViewController {
             }()
         
         
+        //MARK: Label c (or connect with)
+            
+            private let dividerLabel: UILabel = {
+                let label = UILabel()
+                label.text = "or connect with "
+                label.font = UIFont.systemFont(ofSize: 12)
+                label.textColor = .white.withAlphaComponent(0.6)
+                label.textAlignment = .center
+                label.translatesAutoresizingMaskIntoConstraints = false
+                return label
+            }()
+        
+        
     }
 }
