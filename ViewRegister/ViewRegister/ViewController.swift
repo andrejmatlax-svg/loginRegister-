@@ -44,6 +44,26 @@ class ViewController: UIViewController {
                 return TextField
             }()
 
+        //MARK: TextFiled с названием (Password) c деталими(look)
+            
+            private let passwordTextField: UITextField = {
+                let TextField = UITextField()
+                TextField.placeholder = "Password"
+                TextField.backgroundColor = .white
+                TextField.layer.cornerRadius = 22
+                
+                let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 44))
+                        let icon = UIImageView(image: UIImage(systemName: "lock"))
+                        icon.tintColor = .lightGray
+                        icon.frame = CGRect(x: 16, y: 13, width: 18, height: 18)
+                        leftView.addSubview(icon)
+                        TextField.leftView = leftView
+                        TextField.leftViewMode = .always
+                       
+                        TextField.translatesAutoresizingMaskIntoConstraints = false
+                        return TextField
+                    }()
+        
         
         
     }
