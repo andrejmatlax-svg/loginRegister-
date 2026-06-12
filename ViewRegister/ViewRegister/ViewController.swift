@@ -14,6 +14,7 @@ class ViewController: UIViewController {
             label.translatesAutoresizingMaskIntoConstraints = false
             return label
         }()
+        
         //MARK: TextFiled с названием (Username), с деталими (person, checkmark.circle.fill)
             
             private let usernameTextField: UITextField = {
@@ -108,7 +109,9 @@ class ViewController: UIViewController {
                 label.translatesAutoresizingMaskIntoConstraints = false
                 return label
             }()
+        
         //MARK: кнопка (Facebook)
+        
         private let facebookButton: UIButton = {
                 let button = UIButton(type: .system)
                 button.setTitle("Facebook", for: .normal)
@@ -118,6 +121,7 @@ class ViewController: UIViewController {
                 button.translatesAutoresizingMaskIntoConstraints = false
                 return button
             }()
+        
         //MARK: кнопка (Twitter)
             
             private let twitterButton: UIButton = {
@@ -129,6 +133,7 @@ class ViewController: UIViewController {
                 button.translatesAutoresizingMaskIntoConstraints = false
                 return button
             }()
+        
         //MARK: соединение кнопак Twitter и Facebook
             
             private let socialStackView: UIStackView = {
@@ -139,7 +144,26 @@ class ViewController: UIViewController {
                 stack.translatesAutoresizingMaskIntoConstraints = false
                 return stack
             }()
-
+        
+        //MARK: прозрачная кнопка с (Don't have account? и Sign up  )
+            
+            private let signUpButton: UIButton = {
+                let button = UIButton(type: .system)
+                
+                
+                let attString = NSMutableAttributedString(
+                    string: "Don't have account? ",
+                    attributes: [.foregroundColor: UIColor.white.withAlphaComponent(0.8), .font: UIFont.systemFont(ofSize: 14)]
+                )
+                attString.append(NSAttributedString(
+                    string: "Sign up",
+                    attributes: [.foregroundColor: UIColor.white, .font: UIFont.systemFont(ofSize: 14, weight: .bold)]
+                ))
+                
+                button.setAttributedTitle(attString, for: .normal)
+                button.translatesAutoresizingMaskIntoConstraints = false
+                return button
+            }()
         
     }
 }
