@@ -118,7 +118,17 @@ class ViewController: UIViewController {
                 button.translatesAutoresizingMaskIntoConstraints = false
                 return button
             }()
-
+        //MARK: кнопка (Twitter)
+            
+            private let twitterButton: UIButton = {
+                let button = UIButton(type: .system)
+                button.setTitle("Twitter", for: .normal)
+                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = UIColor(red: 0.18, green: 0.34, blue: 0.63, alpha: 1.0)
+                button.layer.cornerRadius = 20
+                button.translatesAutoresizingMaskIntoConstraints = false
+                return button
+            }()
         
     }
 }
