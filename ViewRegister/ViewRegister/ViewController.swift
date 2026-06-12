@@ -85,6 +85,16 @@ class ViewController: UIViewController {
                 return button
             }()
         
+        //MARK: button c (Forgot your password?)
+            
+            private let forgotPasswordButton: UIButton = {
+                let button = UIButton(type: .system)
+                button.setTitle("Forgot your password?", for: .normal)
+                button.setTitleColor(.white.withAlphaComponent(0.8), for: .normal)
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 14)
+                button.translatesAutoresizingMaskIntoConstraints = false
+                return button
+            }()
         
         
     }
