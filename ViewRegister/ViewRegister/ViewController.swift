@@ -108,7 +108,17 @@ class ViewController: UIViewController {
                 label.translatesAutoresizingMaskIntoConstraints = false
                 return label
             }()
-        
+        //MARK: кнопка (Facebook)
+        private let facebookButton: UIButton = {
+                let button = UIButton(type: .system)
+                button.setTitle("Facebook", for: .normal)
+                button.setTitleColor(.white, for: .normal)
+                button.backgroundColor = UIColor(red: 0.11, green: 0.55, blue: 0.93, alpha: 1.0)
+                button.layer.cornerRadius = 20
+                button.translatesAutoresizingMaskIntoConstraints = false
+                return button
+            }()
+
         
     }
 }
