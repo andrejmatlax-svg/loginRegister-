@@ -65,6 +65,27 @@ class ViewController: UIViewController {
                     }()
         
         
+         //MARK: кнопка Login
+            
+            private let loginButton: UIButton = {
+                let button = UIButton(type: .system)
+                button.setTitle("Login", for: .normal)
+                button.setTitleColor(.white, for: .normal)
+                button.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .semibold)
+                button.backgroundColor = UIColor(red: 0.35, green: 0.40, blue: 0.80, alpha: 1.0)
+                button.layer.cornerRadius = 22
+                
+                
+                button.layer.shadowColor = UIColor.black.cgColor
+                button.layer.shadowOffset = CGSize(width: 0, height: 4)
+                button.layer.shadowOpacity = 0.2
+                button.layer.shadowRadius = 5
+                
+                button.translatesAutoresizingMaskIntoConstraints = false
+                return button
+            }()
+        
+        
         
     }
 }
