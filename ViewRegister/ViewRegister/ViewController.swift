@@ -1,11 +1,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-    override func loadView() {
-        super.loadView()
-        view.backgroundColor = .blue
+    class ViewController: UIViewController {
         
+        //MARK: Label с названием (Login)
         
+        private let titleLabel: UILabel = {
+            let label = UILabel()
+            label.text = "Login"
+            label.font = UIFont.systemFont(ofSize: 32, weight: .bold)
+            label.textColor = .white
+            label.textAlignment = .center
+            label.translatesAutoresizingMaskIntoConstraints = false
+            return label
+        }()
         
         
     }

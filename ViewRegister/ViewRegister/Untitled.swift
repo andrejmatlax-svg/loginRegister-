@@ -19,7 +19,8 @@ class myViewController: UIViewController {
     // 2. Вью загружена в память (идеально для первичной настройки UI)
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(" ViewController: viewDidLoad (Вью загружена в память)")
+    
+    print(" ViewController: viewDidLoad (Вью загружена в память)")
         view.backgroundColor = .systemBackground
     }
 
