@@ -1,8 +1,7 @@
 import UIKit
 
 class ViewController: UIViewController {
-    class ViewController: UIViewController {
-        
+  
         //MARK: Label с названием (Login)
         
         private let titleLabel: UILabel = {
@@ -165,5 +164,80 @@ class ViewController: UIViewController {
                 return button
             }()
         
+        
+        
+        override func viewDidLoad() {
+                super.viewDidLoad()
+                setupBackground()
+                setupHierarchy()
+                setupLayout()
+            }
+        
+        private func setupHierarchy() {
+            view.addSubview(titleLabel)
+            view.addSubview(usernameTextField)
+            view.addSubview(passwordTextField)
+            view.addSubview(loginButton)
+            view.addSubview(forgotPasswordButton)
+            view.addSubview(dividerLabel)
+            
+            socialStackView.addArrangedSubview(facebookButton)
+            socialStackView.addArrangedSubview(twitterButton)
+            view.addSubview(socialStackView)
+            
+            view.addSubview(signUpButton)
+        }
+                
+            func setupBackground() {
+            view.backgroundColor = UIColor(red: 0.15, green: 0.25, blue: 0.55, alpha: 1.0)
+                    }
+                
+                
+                
+//MARK: настройка всех button textFiled и Label
+                    
+private func setupLayout() {
+    NSLayoutConstraint.activate([
+                            
+titleLabel.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 60),
+titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                            
+                           
+usernameTextField.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 50),
+usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+usernameTextField.heightAnchor.constraint(equalToConstant: 44),
+                            
+                            
+passwordTextField.topAnchor.constraint(equalTo: usernameTextField.bottomAnchor, constant: 16),
+passwordTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+passwordTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+passwordTextField.heightAnchor.constraint(equalToConstant: 44),
+                            
+loginButton.topAnchor.constraint(equalTo: passwordTextField.bottomAnchor, constant: 28),
+                            
+loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+loginButton.heightAnchor.constraint(equalToConstant: 44),
+                                        
+                                        
+forgotPasswordButton.topAnchor.constraint(equalTo: loginButton.bottomAnchor, constant: 16),
+forgotPasswordButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+                                        
+dividerLabel.bottomAnchor.constraint(equalTo: socialStackView.topAnchor, constant: -24),
+dividerLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+dividerLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+                                        
+                                        
+socialStackView.bottomAnchor.constraint(equalTo: signUpButton.topAnchor, constant: -40),
+socialStackView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 40),
+socialStackView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -40),
+socialStackView.heightAnchor.constraint(equalToConstant: 40),
+signUpButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -20),
+signUpButton.centerXAnchor.constraint(equalTo: view.centerXAnchor)
+                    ])
+                        
+             
+           }
     }
-}
+
