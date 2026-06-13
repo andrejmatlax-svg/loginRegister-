@@ -17,11 +17,11 @@ class ViewController: UIViewController {
         //MARK: TextFiled с названием (Username), с деталими (person, checkmark.circle.fill)
             
             private let usernameTextField: UITextField = {
-                let TextField = UITextField()
-                TextField.placeholder = "Username"
-                TextField.backgroundColor = .white
-                TextField.layer.cornerRadius = 22
-                TextField.textColor = .black
+                let textField = UITextField()
+                textField.placeholder = "Username"
+                textField.backgroundColor = .white
+                textField.layer.cornerRadius = 22
+                textField.textColor = .black
                 
                 
                 let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 44))
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
                 icon.tintColor = .lightGray
                 icon.frame = CGRect(x: 16, y: 13, width: 18, height: 18)
                 leftView.addSubview(icon)
-                TextField.leftView = leftView
-                TextField.leftViewMode = .always
+                textField.leftView = leftView
+                textField.leftViewMode = .always
                 
                
                 let rightView = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: 44))
@@ -38,30 +38,30 @@ class ViewController: UIViewController {
                 checkIcon.tintColor = .systemGreen
                 checkIcon.frame = CGRect(x: 6, y: 13, width: 18, height: 18)
                 rightView.addSubview(checkIcon)
-                TextField.rightView = rightView
-                TextField.rightViewMode = .always
-                TextField.translatesAutoresizingMaskIntoConstraints = false
-                return TextField
+                textField.rightView = rightView
+                textField.rightViewMode = .always
+                textField.translatesAutoresizingMaskIntoConstraints = false
+                return textField
             }()
 
         //MARK: TextFiled с названием (Password) c деталими(look)
             
             private let passwordTextField: UITextField = {
-                let TextField = UITextField()
-                TextField.placeholder = "Password"
-                TextField.backgroundColor = .white
-                TextField.layer.cornerRadius = 22
+                let textField1 = UITextField()
+                textField1.placeholder = "Password"
+                textField1.backgroundColor = .white
+                textField1.layer.cornerRadius = 22
                 
                 let leftView = UIView(frame: CGRect(x: 0, y: 0, width: 45, height: 44))
                         let icon = UIImageView(image: UIImage(systemName: "lock"))
                         icon.tintColor = .lightGray
                         icon.frame = CGRect(x: 16, y: 13, width: 18, height: 18)
                         leftView.addSubview(icon)
-                        TextField.leftView = leftView
-                        TextField.leftViewMode = .always
+                textField1.leftView = leftView
+                textField1.leftViewMode = .always
                        
-                        TextField.translatesAutoresizingMaskIntoConstraints = false
-                        return TextField
+                textField1.translatesAutoresizingMaskIntoConstraints = false
+                        return textField1
                     }()
         
         
@@ -189,7 +189,7 @@ class ViewController: UIViewController {
         }
                 
             func setupBackground() {
-            view.backgroundColor = UIColor(red: 0.15, green: 0.25, blue: 0.55, alpha: 1.0)
+            view.backgroundColor = UIColor(red: 0.15, green: 0.18, blue: 0.36, alpha: 1.0)
                     }
                 
                 
